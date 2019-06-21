@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>HRIS Go</title> 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/fr7/framework7.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script src="../js/src-qr/jquery.qrcode.js"></script>
+  <script src="../js/src-qr/qrcode.js"></script>
+ 
+</head>
+<body>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover" style="background-color: deepskyblue">
+      <div class="view">
+        <div class="page"> 
+          <div class="page-content" style="background-color: deepskyblue">
+            <div class="block">
+              
+            <p><img src="../img/logo-rskmd-new.png" width="153px" title="Logo HRIS RSKM" /></p>
+            <ul id="main">   
+                <li><a href="/setelan/" style="color:#fff;width:100%;" class="panel-close"><div style="width:100%">Setting</div></a></li> 
+                <li><a href="/help/" style="color:#fff;width:100%;" class="panel-close"><div style="width:100%">Help</div></a></li> 
+                <li><a href="#" onclick="javascript:get_emp_book_open()" style="color:#fff;width:100%;" class="panel-close"><div style="width:100%">Employee book</div></a></li> 
+                <li><a href="#" onclick="location.href='../login.html'" style="color:#fff;width:100%;" class="panel-close"><div style="width:100%">Log out</div></a></li> 
+            </ul>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+      
+    <!-- Views/Tabs container -->
+    <div class="views tabs">
+      <!-- Tabbar for switching views-tabs -->
+      <div class="toolbar tabbar-labels toolbar-bottom-md">
+        <div class="toolbar-inner"> 
+          <a href="/home/" class="tab-link">
+            <i class="icon f7-icons ios-only">home</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">home_fill</i>
+            <i class="icon material-icons md-only">home</i>
+            <span class="tabbar-label">Dashboard</span>
+          </a>
+          <a href="/request/" class="tab-link">
+            <i class="icon f7-icons ios-only">extension</i> 
+            <i class="icon f7-icons ios-only icon-ios-fill">extension_fill</i>
+            <i class="icon material-icons md-only">extension</i>
+            <span class="tabbar-label">Request</span>
+          </a>
+          <a href="/achieve/" class="tab-link">
+            <i class="icon f7-icons ios-only">visibility</i> 
+            <i class="icon f7-icons ios-only icon-ios-fill">visibility_fill</i>
+            <i class="icon material-icons md-only">visibility</i>
+            <span class="tabbar-label">Report</span>
+          </a>
+          <a href="/medical/" class="tab-link">
+            <i class="icon f7-icons ios-only">accessibility</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">accessibility_fill</i>
+            <i class="icon material-icons md-only">accessibility</i>
+            <span class="tabbar-label">Health</span>
+          </a>
+          <a href="/profil-user/" class="tab-link">
+            <i class="icon f7-icons ios-only">account_circle</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">account_circle_fill</i>
+            <i class="icon material-icons md-only">account_circle</i>
+            <span class="tabbar-label">Profil</span>
+          </a> 
+        </div>
+      </div>
+      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-home" class="view view-main tab tab-active">
+        
+          
+          
+          <div class="page" data-name="home">
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left">
+                <a  class="link icon-only panel-open" data-panel="left">
+                  <i class="icon f7-icons ios-only">menu</i>
+                  <i class="icon material-icons md-only">menu</i>
+                </a>
+              </div> 
+              <div class="center sliding">HRIS RSKM</div> 
+            </div>
+          </div>
+
+          <!-- Scrollable page content--> 
+          <div class="page-content">
+            <div class="block block-strong">
+                <div  id="myarea"></div>
+            </div>
+ 
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="/profile/" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title">Pribadi</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+ 
+            <div class="block-title searchbar-hide-on-search">Notifikasi</div>
+            <div class="list links-list searchbar-hide-on-search">
+            <ul id="notification_all">
+            
+            <li class="swipeout" style="margin:2px;">
+              <div class="swipeout-content item-content" style="border:1px solid green;">
+                <div class="item-media" style="text-align: right;font-size:10px;">...</div> 
+              </div> 
+              <div class="swipeout-actions-right"> 
+                <a href="#">.</a>  
+              </div>
+            </li>
+                
+            </ul>
+            </div> 
+              
+            
+              
+            <div class="block-title searchbar-hide-on-search">Medical check up</div>
+            <div class="list links-list searchbar-hide-on-search">
+              <ul>
+                <li>
+                  <a href="/kuponmcu/">Kupon MCU</a>
+                </li>
+                <li>
+                  <a href="#">Riwayat checkup</a>
+                </li> 
+              </ul>
+            </div>
+              
+              
+          </div> 
+        
+        </div>
+          
+
+      </div>
+
+      <!-- Settings View -->
+      <div id="view-setelan" class="view tab">
+        <!-- Settings page will be loaded here dynamically from /setelan/ route -->
+      </div>
+        
+      <!-- Catalog View -->
+      <div id="view-catalog" class="view tab">
+        <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
+      </div>
+
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="my-popup">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Popup</div>
+              <div class="right">
+                <a href="#" class="link popup-close">Close</a>
+              </div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>Popup content goes here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     
+  </div>
+  <!-- Cordova -->
+   
+    <script src="../cordova.js"></script>
+    <p id="deviceProperties" style="display: none;">Loading device properties...</p>
+    <!-- Framework7 library -->
+    <script src="js/fr7/framework7.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script> 
+
+    <!-- App routes -->
+    <script src="js/routes.js"></script>
+
+    <!-- Your custom app scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/app_home.js"></script>
+    <script src="js/app_formcuti.js"></script>
+    <script src="js/app_formcutibatal.js"></script>
+    <script src="js/app_formijin.js"></script> 
+    <script src="js/app_formlembur.js"></script> 
+    <script src="js/app_formtukardinas.js"></script>
+    <script src="js/app_formjalandinas.js"></script>
+    
+    <script src="js/app_formkomplain.js"></script>
+    <script src="js/app_formkontak.js"></script>
+    
+    <script src="js/app_view_periodegaji.js"></script>
+    <script src="js/app_view_daftarpinjaman.js"></script>
+    <script src="js/app_view_daftarpinjamandetail.js"></script>
+    <script src="js/app_view_daftarachieve.js"></script>
+    <script src="js/app_view_riwayatcuti.js"></script>
+    <script src="js/app_view_kuponmcu.js"></script>
+    
+    <script src="js/app_profile_keluarga.js"></script>
+    <script src="js/app_profile_keluarga_edit.js"></script>
+    <script src="js/app_profile_riwayat_kerja.js"></script>
+    <script src="js/app_profile_riwayat_kesehatan.js"></script>
+    <script src="js/app_profile_riwayat_pendidikan.js"></script>
+    
+    <script src="js/app_capturescan.js"></script>
+</body>
+</html>

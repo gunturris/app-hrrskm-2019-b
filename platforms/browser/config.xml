@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="100043" id="com.rskmd.hris" version="1.4.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>HRIS Go</name>
+    <description>
+        Informasi kekaryawanan.
+    </description>
+    <author email="gunturris@gmail.com" href="http://rskmd.co.id">
+        Gunturris
+    </author>
+    <content src="login.html" />
+    <access origin="*" />
+    <access origin="*://103.31.109.106:2224/app-rest/*" subdomains="true" />
+    <access origin="*://*.rskmd.com/*" subdomains="true" />
+    <access origin="*://*.googleapis.com/*" subdomains="true" />
+    <access origin="*://*.gstatic.com/*" subdomains="true" />
+    <access origin="*://*.google.com/*" subdomains="true" />
+    <access origin="*://*.googleusercontent.com/*" subdomains="true" />
+    <allow-navigation href="http://*/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="orientation" value="portrait" />
+</widget>

@@ -1,0 +1,94 @@
+/* Your app styles here */
+.ios .tabbar-labels .tab-link:not(.tab-link-active) .icon-ios-fill {
+  display: none;
+}
+.ios .tabbar-labels .tab-link.tab-link-active .icon:not(.icon-ios-fill) {
+  display: none;
+} 
+ul#main {
+	list-style-type: none;
+	margin: 0;
+	padding: 0; 
+}
+
+ul#profile li{
+	margin: 4px;
+	background-color: #80148e;
+	color: #e8d1e7;
+	min-height: 20px;
+	padding: 5px;
+	padding-top:8px;
+	font-size: 13px;
+	font-family:helvetica;
+	font-weight:bold;
+	letter-spacing: 2px;
+	width:100px;
+}
+
+ul#main li{
+	margin: 4px;
+	background-color: #1E90FF;
+	color: #e8d1e7;
+	min-height: 20px;
+	padding: 5px;
+	padding-top:8px;
+	font-size: 10.5px;
+	font-family:helvetica;
+	font-weight:bold;
+	letter-spacing: 2px;
+}
+
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}
+
+.item-input-wrap textarea{
+    font-size:9 px;
+}
+    .rTable {
+        display: block;
+        width: 100%;
+    }
+    .rTableHeading, .rTableBody, .rTableFoot, .rTableRow{
+         clear: both; 
+    }
+    .rTableHead, .rTableFoot{
+        background-color: #DDD;
+        font-weight: bold;
+    }
+    .rTableCellValue{ 
+        border: 1;
+        text-align: right;
+        height: 35px;
+        overflow: hidden; 
+        width: 35%;
+        float:right; 
+    }
+    .rTableCell, .rTableHead, .rTableCellLabel {
+        border: 1;
+        float: left;
+        height: 35px;
+        overflow: hidden;
+        padding: 3px 1.8%;
+        width: 60%;
+    }
+    .rTable:after {
+         visibility: hidden;
+         display: block;
+         font-size: 0;
+         content: " ";
+         clear: both;
+         height: 0;
+    }  
+     

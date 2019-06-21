@@ -1,0 +1,31 @@
+{
+  "name": "com.phonegap.helloworld",
+  "version": "1.0.0",
+  "displayName": "helloworld",
+  "cordova": {
+    "platforms": [],
+    "plugins": {
+      "cordova-plugin-device": {},
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-vibration": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-file": {},
+      "cordova-plugin-file-transfer": {},
+      "phonegap-plugin-barcodescanner": {}
+    }
+  },
+  "dependencies": {
+    "cordova-android": "^6.2.3",
+    "cordova-plugin-device": "~1.1.6",
+    "cordova-plugin-file": "^4.3.3",
+    "cordova-plugin-file-transfer": "^1.5.1",
+    "cordova-plugin-geolocation": "~2.4.3",
+    "cordova-plugin-inappbrowser": "~1.7.1",
+    "cordova-plugin-media-capture": "^1.4.3",
+    "cordova-plugin-vibration": "~2.1.5",
+    "cordova-plugin-whitelist": "~1.2.1",
+    "file-transfer": "0.0.0",
+    "phonegap-plugin-barcodescanner": "^6.0.8"
+  }
+}

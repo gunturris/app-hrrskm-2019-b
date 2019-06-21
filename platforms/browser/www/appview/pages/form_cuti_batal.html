@@ -1,0 +1,56 @@
+<div class="page" data-name="formcutibatal">
+  <div class="navbar">
+    <div class="navbar-inner sliding"> 
+        <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+      </div>
+      <div class="title">Pembatalan Cuti</div>
+    </div>
+  </div>
+  <div class="page-content">
+     
+    <form class="list" id="form-cuti">
+      <ul>
+        <li> 
+            <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Pembatalan disetujui oleh</div>
+                  <div class="item-input-wrap"> 
+                    <input id="autocomplete-dropdown-ajax" type="text" placeholder="NIK yang menyetujui" name="autocomplete-dropdown-ajax">
+                  </div>
+                </div>
+            </div>
+        </li>
+          <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Alasan pembatalan</div>
+              <div class="item-input-wrap">
+                <textarea id="keterangan" name="keterangan" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+        </li> 
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner"> 
+              <div class="item-input-wrap">
+              Pilih tanggal yang akan dibatalkan
+              </div>
+            </div>
+          </div>
+        </li> 
+        <li id="data_tanggal_cuti">..</li>   
+        <li>  
+            <div class="block block-strong row">
+                <div class="col"><a class="button convert-form-to-data" href="#" onclick="request_cuti_batal()">Ajukan Pembatalan</a></div> 
+            </div>
+        </li> 
+      </ul>
+       
+    </form>
+  </div>
+</div>

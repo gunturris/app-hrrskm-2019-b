@@ -1,0 +1,98 @@
+<div class="page" data-name="formlembur">
+  <div class="navbar">
+    <div class="navbar-inner sliding"> 
+        <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+      </div>
+      <div class="title">Perintah lembur bekerja</div>
+    </div>
+  </div>
+  <div class="page-content">
+     
+    <form class="list" id="form-cuti">
+      <ul>
+          <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Menugaskan lembur kepada</div>
+              <div class="item-input-wrap">
+                    <input id="autocomplete-dropdown-ajax-lembur-nik" type="text" placeholder="NIK untuk tugas lembur">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Untuk melaksanakan lembur pada tanggal</div>
+              <div class="item-input-wrap">
+              <input type="text" placeholder="Tanggal lembur" readonly="readonly" id="demo-calendar-lembur"/>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Jam mulai</div>
+              <div class="item-input-wrap">
+                <table width="100%">
+                    <tr>
+                        <td width="45%"><input type="text" placeholder="Jam" id="jam_mulai" name="jam_mulai" readonly="readonly" style="width:100%;align:center;"/></td>
+                        <td width="10%" align="center"><b>:</b></td>
+                        <td width="45%"><input type="text" placeholder="Mnt" id="menit_mulai" name="menit_mulai" readonly="readonly" style="width:100%;align:center;"/></td>
+                    </tr>
+                </table> 
+              </div>
+            </div>
+          </div>
+        </li> 
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Jam berakhir</div>
+              <div class="item-input-wrap">
+                <table width="100%">
+                    <tr>
+                        <td width="45%"><input type="text" placeholder="Jam" readonly="readonly" id="jam_selesai" name="jam_selesai" style="width:100%;align:center;"/></td>
+                        <td width="10%" align="center"><b>:</b></td>
+                        <td width="45%"><input type="text" placeholder="Mnt" readonly="readonly" id="menit_selesai" name="menit_selesai" style="width:100%;align:center;"/></td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </li> 
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Uraian Tugas</div>
+              <div class="item-input-wrap">
+                <textarea id="tugas" name="tugas" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+        </li> 
+        <li> 
+            <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Disetujui oleh</div>
+                  <div class="item-input-wrap"> 
+                    <input id="autocomplete-dropdown-ajax-lembur" type="text" placeholder="NIK yang menyetujui">
+                  </div>
+                </div>
+            </div>
+        </li>
+      <li>  
+    <div class="block block-strong row">
+      <div class="col"><a class="button convert-form-to-data" href="#" onclick="request_lembur()">Ajukan Lembur</a></div> 
+    </div>
+        </li> 
+      </ul>
+       
+    </form>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="page" data-name="formprofileriwayatpendidikan">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+        <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+      </div>
+      <div class="title">Tambah data riwayat kesehatan</div>
+    </div>
+  </div>
+  <div class="page-content">
+     
+    <form class="list" id="form-profile-keluarga">
+      <ul>
+          
+        
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Karyawan</div>
+              <div class="item-input-wrap">
+                <input type="text"  id="nama_karyawan" value="" readonly="readonly"/>
+              </div>
+            </div>
+          </div>
+        </li> 
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Nama penyakit</div>
+              <div class="item-input-wrap">
+                <input type="text"  id="nama_perusahaan" value=""/>
+              </div>
+            </div>
+          </div>
+        </li> 
+          
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Tahun sakit</div>
+              <div class="item-input-wrap">
+              <table width="100%">
+                    <tr>
+                        <td width="45%"><input type="text" placeholder="Tahun" readonly="readonly" id="tahun_mulai" name="tahun_mulai" style="width:100%;align:center;"/></td>
+                        <td width="10%" align="center">&nbsp;</td>
+                        <td width="45%">&nbsp;</td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </li> 
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Status kesembuhan</div>
+              <div class="item-input-wrap">
+                <input type="text" id="lokasi_kerja" placeholder="Status kesembugan" readonly="readonly" />
+              </div>
+            </div>
+          </div>
+        </li>   
+           
+          
+      <li>  
+    <div class="block block-strong row">
+      <div class="col"><a class="button convert-form-to-data" href="#" onclick="request_revisi_riwayat_kerja()">Ajukan Data</a></div> 
+    </div>
+        </li> 
+      </ul>
+       
+    </form>
+  </div>
+</div>

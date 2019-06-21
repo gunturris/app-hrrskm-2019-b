@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="100043" id="com.rskmd.hris" version="1.4.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>HRIS Go</name>
+    <description>
+        Informasi kekaryawanan.
+    </description>
+    <author email="gunturris@gmail.com" href="http://rskmd.co.id">
+        Gunturris
+    </author>
+    <content src="login.html" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="orientation" value="portrait" />
+    <platform name="android">
+        <icon density="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
+        <icon density="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
+        <icon density="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
+        <icon density="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+        <icon density="xxhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+        <icon density="xxxhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+        <splash density="land-ldpi" src="www/res/screen/android/screen-ldpi-landscape.png" />
+        <splash density="land-mdpi" src="www/res/screen/android/screen-mdpi-landscape.png" />
+        <splash density="land-hdpi" src="www/res/screen/android/screen-hdpi-landscape.png" />
+        <splash density="land-xhdpi" src="www/res/screen/android/screen-xhdpi-landscape.png" />
+        <splash density="land-xxhdpi" src="www/res/screen/android/screen-xhdpi-landscape.png" />
+        <splash density="land-xxxhdpi" src="www/res/screen/android/screen-xhdpi-landscape.png" />
+        <splash density="port-ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
+        <splash density="port-mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
+        <splash density="port-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
+        <splash density="port-xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
+        <splash density="port-xxhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
+        <splash density="port-xxxhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
+    </platform>
+    <access origin="*" />
+    <access origin="*://103.31.109.106:2224/app-rest/*" subdomains="true" />
+    <access origin="*://*.rskmd.com/*" subdomains="true" />
+    <access origin="*://*.googleapis.com/*" subdomains="true" />
+    <access origin="*://*.gstatic.com/*" subdomains="true" />
+    <access origin="*://*.google.com/*" subdomains="true" />
+    <access origin="*://*.googleusercontent.com/*" subdomains="true" />
+    <allow-navigation href="http://*/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <plugin name="cordova-plugin-device" spec="~1.1.6" />
+    <plugin name="cordova-plugin-geolocation" spec="~2.4.3" />
+    <plugin name="cordova-plugin-vibration" spec="~2.1.5" />
+    <plugin name="cordova-plugin-inappbrowser" spec="~1.7.1" />
+    <plugin name="cordova-plugin-whitelist" spec="~1.2.1" />
+    <plugin name="cordova-plugin-file" spec="^4.3.3" />
+    <plugin name="cordova-plugin-file-transfer" spec="^1.5.1" />
+    <plugin name="phonegap-plugin-barcodescanner" spec="^6.0.8" />
+</widget>

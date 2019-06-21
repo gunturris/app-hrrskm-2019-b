@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "HRIS Go",
+  "short_name": "HRIS Go",
+  "version": "com.rskmd.hris",
+  "description": "Informasi kekaryawanan.",
+  "author": "Gunturris",
+  "icons": [],
+  "orientation": "portrait",
+  "start_url": "login.html"
+}

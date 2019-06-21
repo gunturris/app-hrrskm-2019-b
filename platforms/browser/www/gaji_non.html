@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Pasien RSKM</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css"> 
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+	<link rel="stylesheet" href="css/swipebox.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <script type="text/javascript" src="cordova.js"></script>  
+      
+ 
+      
+      
+    <style>
+    .rTable {
+        display: block;
+        width: 100%;
+    }
+    .rTableHeading, .rTableBody, .rTableFoot, .rTableRow{
+        clear: both;
+    }
+    .rTableHead, .rTableFoot{
+        background-color: #DDD;
+        font-weight: bold;
+    }
+    .rTableCellValue{
+        border: 0;
+        text-align: right;
+        height: 17px;
+        overflow: hidden; 
+        width: 95%;
+    }
+    .rTableCell, .rTableHead, .rTableCellLabel {
+        border: 0;
+        float: left;
+        height: 17px;
+        overflow: hidden;
+        padding: 3px 1.8%;
+        width: 90%;
+    }
+    .rTable:after {
+         visibility: hidden;
+         display: block;
+         font-size: 0;
+         content: " ";
+         clear: both;
+         height: 0;
+    }  
+    </style>
+  </head>
+  <body id="mobile_wrap"> 
+  
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div> 
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-left panel-cover">  
+      <div class="content-block">
+        <p><img src="img/logo-rskmd.png" title="Logo HRIS RSKM" /></p>
+		<ul id="main"> 
+			<li><a onclick="download_pdf()" style="color:#fff" >Data karyawan</a></li>
+			<li><a onclick="javascript:location.href='gaji.html';" style="color:#fff" >Gaji reguler</a></li>
+			<li><a onclick="javascript:location.href='gaji_non.html';" style="color:#fff" >Gaji non reguler</a></li>
+			<li><a onclick="javascript:location.href='ganti_pin.html';" style="color:#fff" >Ganti PIN</a></li>
+			<li><a onclick="javascript:location.href='login.html';"   style="color:#fff" >LOG OFF</a></li>
+		</ul>
+	  </div> 
+    </div>
+	
+    <div class="panel panel-right panel-cover" style="width:60px;"> 
+      <div class="content-block">
+	  <div style="margin-bottom:3px;"><a href="about.html"><img src="img/home.png"></a></div>
+	  <div style="margin-bottom:3px;"><a href="gallery.html"><img src="img/palette.png"></a></div>
+	  <div><a href="contact.html"><img src="img/contact.png"></a></div> 
+	  </div> 
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+			<div class="navbar-inner theme-white"> 
+			<div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class--> 
+			  <a href="#" data-panel="left"  class="link icon-only open-panel"> <i class="icon icon-bars color-white"></i></a>
+            </div>
+			
+            <!-- We have home navbar without left link-->
+            <div class="center sliding">HRIS RSKM</div>
+			 
+			</div> 
+        </div>
+		
+		<div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+<div style="padding:4px;" id="pageview">
+    
+    
+</div><p>&nbsp;</p> <p>&nbsp;</p> 
+             
+                </div>
+            </div>
+        </div>
+         
+        <!-- Bottom Toolbar-->
+        <div class="toolbar" style="background-color:darkseagreen"> 
+		  <div style="text-align:center;font-size:14px;font-family:verdana;color:#fff;padding-top:10px;">RS Krakatau Medika &copy; 2018</div>
+          
+		</div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script> 
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script> 
+    <script type="text/javascript" src="js/jquery.swipebox.js"></script> 
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+       <script language="Javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady(){
+            return true;
+        }
+        function download_pdf(   ){
+            var karyawan_id = getParameterByName('kid');
+            var periode_id = getParameterByName('pid');
+            var pdfFile = "http://103.31.109.106:2224/index.php?com=report&task=slip_gaji&karyawan_id="+ karyawan_id +"&periode_id="+ periode_id;
+           // var pdfFile ='http://www.africau.edu/images/default/sample.pdf'
+             
+            window.open(pdfFile, '_system');
+            //downloadAndOpenPDF(pdfFile , periode_id) ;
+            
+            return;
+        }  
+            
+        function downloadAndOpenPDF(url , periode_id ) {
+            var fileTransfer = new FileTransfer();
+            var uri = encodeURI('http://www.africau.edu/images/default/sample.pdf'); 
+            filePath = '/Download/slip_'+ periode_id +'.pdf';
+            fileTransfer.download(
+                uri,
+                filePath,
+                function(entry) { 
+                    alert(entry.fullPath);
+                },
+                function (error) { 
+                    alert('PDF file tidak dapat di download');
+                    alert(error );
+                }
+            );
+            
+              
+        }   
+           
+           
+        function rpFormat(bilangan){
+            
+            var	number_string = bilangan.toString(),
+                sisa 	= number_string.length % 3,
+                rupiah 	= number_string.substr(0, sisa),
+                ribuan 	= number_string.substr(sisa).match(/\d{3}/g);
+
+            if (ribuan) {
+                separator = sisa ? '.' : '';
+                rupiah += separator + ribuan.join('.');
+            }
+            return rupiah;
+        }
+        
+        function changeDateFormat(inputDate){  // expects Y-m-d
+            var splitDate = inputDate.split('-');
+            if(splitDate.count == 0){
+                return null;
+            }
+
+            var year = splitDate[0];
+            var month = splitDate[1];
+            var day = splitDate[2]; 
+
+            return month  + ' - ' + year;
+        }
+        var prm = getParameterByName('key');  
+           
+        $.get(   serverHost + "gaji.php?key="+prm, function( data ) { 
+          respData = JSON.parse( data );  
+          var payyDate = changeDateFormat(respData.sampai)    
+          var content = '<p><center><h3>Slip gaji karyawan</h3> <h2>Periode '+ payyDate +'</h2> - - - - - - - - - - - - - - - - - - - -<br/></center><b>NIK/ Nama</b> <br/> '+respData.nik+' / '+respData.nama+'  </p>'+
+        '<p><b>Gol. Jab / Grade</b> <br/> '+respData.golongan_jabatan+'/ '+respData.grade_id+' </p>'+
+ 
+        '<h3>A. Gaji dibayar</h3><div class="rTable">'+ 
+             '<div class="rTableRow">'+ 
+             '<div class="rTableCellValue">Rp. '+ rpFormat(respData.gaji_dibayar.gaji_dibayar) +' </div>'+ 
+             '</div>'+
+        '<h3>B. Tunjangan</h3>';
+         var total_tunjangan = 0;
+        o = respData.tunjangan ;
+        for( var eachrowtunjangan in o ){  
+             
+        content += '<div class="rTable">'+ 
+             '<div class="rTableRow">'+
+             '<div class="rTableCell">'+ eachrowtunjangan.replace("_"," ") +' </div>'+
+             '<div class="rTableCellValue">Rp. '+ rpFormat(o[eachrowtunjangan])+'</div>'+ 
+             '</div>';
+              total_tunjangan +=   Number(o[eachrowtunjangan]);   
+        }
+         content += '<div class="rTable">'+ 
+             '<div class="rTableRow">'+
+             '<div class="rTableCell"><b>Subtotal</b> </div>'+
+             '<div class="rTableCellValue"> <i>Rp. '+ rpFormat(   total_tunjangan )+'</i></div>'+ 
+             '</div>';
+            
+        content +='<h3>C. Potongan</h3>';
+        var total_potongan = 0;
+        o = respData.potongan ;
+        for( var eachrowpotongan in o ){  
+             
+        content += '<div class="rTable">'+ 
+             '<div class="rTableRow">'+
+             '<div class="rTableCell">'+ eachrowpotongan.replace("_"," ") +' </div>'+
+             '<div class="rTableCellValue">- Rp. '+ rpFormat( (-1) * o[eachrowpotongan])+'</div>'+ 
+             '</div>';
+             total_potongan +=   Number(o[eachrowpotongan]);
+        }
+        content += '<div class="rTable">'+ 
+             '<div class="rTableRow">'+
+             '<div class="rTableCell"><b>Subtotal</b> </div>'+
+             '<div class="rTableCellValue"><i>- Rp. '+ rpFormat( (-1) * total_potongan)+'</i></div>'+ 
+             '</div>';
+            
+            
+        content +='<h3>D. Iuran</h3>';
+        var total_iuran = 0;
+        o = respData.iuran ;
+        for( var eachrowiuran in o ){  
+             
+        content += '<div class="rTable">'+ 
+             '<div class="rTableRow">'+
+             '<div class="rTableCell">'+ eachrowiuran.replace("_"," ") +' </div>'+
+             '<div class="rTableCellValue">Rp. '+ rpFormat(o[eachrowiuran])+'</div>'+ 
+             '</div>';
+             total_iuran  += Number(o[eachrowiuran]);    
+        }
+        content += '<div class="rTable">'+ 
+             '<div class="rTableRow">'+
+             '<div class="rTableCell"><b>Subtotal</b> </div>'+
+             '<div class="rTableCellValue"><i> Rp. '+ rpFormat(   total_iuran)+'</i></div>'+ 
+             '</div>';
+            
+        content += '<h3>E. Take home pay</h3><div class="rTable">'+ 
+             '<div class="rTableRow">'+ 
+             '<div class="rTableCellValue">Rp. '+ rpFormat(respData.gaji_dibayar.takehomepay) +' </div>'+ 
+             '</div>' ;
+              
+         content +='</div>' 
+         document.getElementById("pageview").innerHTML =   content; 
+        });
+        
+        
+    </script>
+  </body>
+</html>

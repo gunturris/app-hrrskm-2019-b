@@ -1,0 +1,59 @@
+<div class="page" data-name="formkontak">
+  <div class="navbar">
+    <div class="navbar-inner sliding"> 
+        <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+      </div>
+      <div class="title">Kirim pertanyaan</div>
+    </div>
+  </div>
+  <div class="page-content">
+     
+    <form class="list" id="form-cuti">
+      <ul> 
+         
+        <li>
+            
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title  item-label">Ditujukan kepada</div>
+              </div>
+            </div>
+            
+            <a class="item-link smart-select smart-select-init" data-open-in="sheet">
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">&nbsp; &gt; &gt; &gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+              </div>
+            </div>
+            <select name="target" id="target"> 
+              <option value="penggajian">PENGGAJIAN</option>
+              <option value="diklat">DIKLAT</option> 
+              <option value="personalia">PERSONALIA</option>  
+            </select> 
+          </a>
+            
+        </li>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Pertanyaan</div>
+              <div class="item-input-wrap">
+                <textarea id="pertanyaan" name="pertanyaan" rows="4"></textarea>
+              </div>
+            </div>
+          </div>
+        </li>   
+      <li>  
+    <div class="block block-strong row">
+      <div class="col"><a class="button convert-form-to-data" href="#" onclick="request_question()">Ajukan pertanyaan</a></div> 
+    </div>
+        </li> 
+      </ul>
+       
+    </form>
+  </div>
+</div>

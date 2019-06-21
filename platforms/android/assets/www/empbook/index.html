@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>HRIS Go</title>  
+  <link rel="stylesheet" href="css/fr7/framework7.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css"> 
+ 
+</head>
+<body>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover" style="background-color: deepskyblue">
+      <div class="view">
+        <div class="page"> 
+          <div class="page-content" style="background-color: deepskyblue">
+            <div class="block">
+               
+            <ul id="main">    
+                <li><a href="/di/" style="color:#fff;width:100%;" class="panel-close"><div style="width:100%">DAFTAR ISI</div></a></li> 
+                <li><a href="/mu/" style="color:#fff;width:100%;" class="panel-close"><div style="width:100%">MUKADIMAH</div></a></li> 
+                <li><a href="/a/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">PIHAK-PIHAK YANG MEMBUAT PERJANJIAN </div></a></li> 
+                <li><a href="/b/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">KETENTUAN UMUM</div></a></li> 
+                <li><a href="/c/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">PENGAKUAN DAN FASILITAS SKKM</div></a></li> 
+                <li><a href="/d/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">HUBUNGAN KERJA</div></a></li> 
+                <li><a href="/e/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">WAKTU KERJA, CUTI DAN IZIN MENINGGALKAN PEKERJAAN</div></a></li> 
+                <li><a href="/f/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">PENGUPAHAN</div></a></li> 
+                <li><a href="/g/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">FASILITAS KESEJAHTERAAN</div></a></li> 
+                <li><a href="/h/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">PERJALANAN DINAS, DETASIR, DAN PEMINDAHAN KARYAWAN</div></a></li> 
+                <li><a href="/i/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">PENGHARGAAN</div></a></li> 
+                <li><a href="/j/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">KESELAMATAN DAN KESEHATAN KERJA SERTA LINGKUNGAN HIDUP</div></a></li> 
+                <li><a href="/k/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">DISIPLIN DAN TATA TERTIB KERJA</div></a></li> 
+                <li><a href="/l/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">PENYELESAIAN KELUH KESAH</div></a></li> 
+                <li><a href="/m/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">PEDOMAN PEMUTUSAN HUBUNGAN KERJA (PHK)</div></a></li> 
+                <li><a href="/n/" style="color:#fff;width:100%;"  class="panel-close"><div style="width:100%">KETENTUAN PERALIHAN DAN PENUTUP</div></a></li>  
+            </ul>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+      
+    <!-- Views/Tabs container -->
+    <div class="views tabs">
+       
+      <div id="view-home" class="view view-main tab tab-active">
+        
+          
+          
+          <div class="page" data-name="home">
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left">
+                <a  class="link icon-only panel-open" data-panel="left">
+                  <i class="icon f7-icons ios-only">menu</i>
+                  <i class="icon material-icons md-only">menu</i>
+                </a>
+              </div> 
+              <div class="center sliding">PKB SDM - SKKM PT RSKM</div>
+                <div class="right">
+                <a  class="link icon-only panel-open" onclick="javascript:get_book_close()">
+                  <i class="icon f7-icons ios-only">close</i>
+                  <i class="icon material-icons md-only">close</i>
+                </a>
+              </div>
+            </div>
+            
+               
+          </div>
+
+          <!-- Scrollable page content--> 
+          <div class="page-content">
+             <div style="text-align: center;vertical-align: bottom;height: 100%;    "><img src="cover_km_pkb.jpg" width="100%"  height="100%" /></div>
+  
+          </div> 
+        
+        </div>
+          
+
+      </div>
+
+      <!-- Settings View -->
+      <div id="view-setelan" class="view tab">
+        <!-- Settings page will be loaded here dynamically from /setelan/ route -->
+      </div>
+        
+      <!-- Catalog View -->
+      <div id="view-catalog" class="view tab">
+        <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
+      </div>
+
+    </div>
+ 
+     
+  </div>
+  <!-- Cordova --> 
+    <!-- Framework7 library -->
+    <script src="js/fr7/framework7.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script> 
+
+    <!-- App routes -->
+    <script src="js/routes.js"></script>
+
+    <!-- Your custom app scripts -->
+    <script src="js/app.js"></script> 
+</body>
+</html>

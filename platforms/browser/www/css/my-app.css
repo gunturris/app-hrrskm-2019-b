@@ -1,0 +1,131 @@
+ul#main {
+	list-style-type: none;
+	margin: 0;
+	padding: 0; 
+}
+
+ul#profile li{
+	margin: 4px;
+	background-color: #80148e;
+	color: #e8d1e7;
+	min-height: 20px;
+	padding: 5px;
+	padding-top:8px;
+	font-size: 13px;
+	font-family:helvetica;
+	font-weight:bold;
+	letter-spacing: 2px;
+	width:100px;
+}
+
+ul#main li{
+	margin: 4px;
+	background-color: #8fbc8e;
+	color: #e8d1e7;
+	min-height: 20px;
+	padding: 5px;
+	padding-top:8px;
+	font-size: 13px;
+	font-family:helvetica;
+	font-weight:bold;
+	letter-spacing: 2px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.page-login {
+    background: #8bfc25;
+}
+
+.login-title-bar{
+	background: #000;
+	color: #ed1b24;
+}
+.login-button{  
+	width:60%;
+	padding:3px;
+	text-align:center;
+	background: #ed1b24;
+	height:46px;
+	color: black;
+	font-size:22px;
+}
+
+.label_profile{
+	font: 9px verdana #CDCDCD;
+}
+
+.field-entry{
+	border-bottom:2px solid #000; 
+}
+#menu_acc{
+	background-color:#CDCDCD;
+	height:35px;
+	margin:10px;
+}
+
+ /*===============================================*/
+/* 8. GALLERY					                 */
+/*===============================================*/
+.ul.photo_gallery_3{
+width: 100%;
+list-style: outside none none;
+padding: 0px;
+margin: 10px 0px 20px;
+float: left;
+clear: both;
+}
+ul.photo_gallery_3{
+margin:0px;
+padding:0px;
+}
+ul.photo_gallery_3 li{
+width: 31%;
+padding: 0px;
+float: left;
+margin: 1%;
+list-style:none;
+}
+ul.photo_gallery_3 li img{
+margin: 0px!important;
+max-width:100%;
+height:auto;
+}
+
+ul.photo_gallery_2{
+margin:0px;
+padding:0px;
+text-align:center;
+}
+
+ul.photo_gallery_2 li{
+width: 40%;
+padding: 0px;
+float: left;
+margin: 1%;
+list-style:none;
+}
+ul.photo_gallery_2 li img{ 
+max-width:100%;
+height:auto;
+}
+
+
+/*===============================================*/
+/*  CONTACT PAGE		                         */
+/*===============================================*/
+.contact .list-block.inset,
+.contact .card ,
+.about .card,
+.gallery .card {
+margin-left:0px!important;
+margin-right:0px!important;
+}
+.contact .card .card-header{
+color:#354069;
+}
+
+/*===========*/

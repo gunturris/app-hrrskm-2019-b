@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="100043" id="com.rskmd.hris" version="1.4.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+    </feature>
+    <feature name="BarcodeScanner">
+        <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
+    </feature>
+    <name>HRIS Go</name>
+    <description>
+        Informasi kekaryawanan.
+    </description>
+    <author email="gunturris@gmail.com" href="http://rskmd.co.id">
+        Gunturris
+    </author>
+    <content src="login.html" />
+    <access origin="*" />
+    <access origin="*://103.31.109.106:2224/app-rest/*" subdomains="true" />
+    <access origin="*://*.rskmd.com/*" subdomains="true" />
+    <access origin="*://*.googleapis.com/*" subdomains="true" />
+    <access origin="*://*.gstatic.com/*" subdomains="true" />
+    <access origin="*://*.google.com/*" subdomains="true" />
+    <access origin="*://*.googleusercontent.com/*" subdomains="true" />
+    <allow-navigation href="http://*/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon density="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
+    <icon density="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
+    <icon density="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
+    <icon density="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+    <icon density="xxhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+    <icon density="xxxhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+    <splash density="land-ldpi" src="www/res/screen/android/screen-ldpi-landscape.png" />
+    <splash density="land-mdpi" src="www/res/screen/android/screen-mdpi-landscape.png" />
+    <splash density="land-hdpi" src="www/res/screen/android/screen-hdpi-landscape.png" />
+    <splash density="land-xhdpi" src="www/res/screen/android/screen-xhdpi-landscape.png" />
+    <splash density="land-xxhdpi" src="www/res/screen/android/screen-xhdpi-landscape.png" />
+    <splash density="land-xxxhdpi" src="www/res/screen/android/screen-xhdpi-landscape.png" />
+    <splash density="port-ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
+    <splash density="port-mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
+    <splash density="port-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
+    <splash density="port-xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
+    <splash density="port-xxhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
+    <splash density="port-xxxhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="orientation" value="portrait" />
+</widget>

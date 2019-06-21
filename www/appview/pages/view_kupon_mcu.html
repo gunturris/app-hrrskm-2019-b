@@ -1,0 +1,64 @@
+<div class="page" data-name="kuponmcu">
+  <div class="navbar">
+    <div class="navbar-inner sliding"> 
+        <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+      </div>
+      <div class="title">Kupon MCU</div>
+    </div>
+  </div>
+  <div class="page-content">
+     
+    <form class="list" id="form-cuti">
+      <ul>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Karyawan</div>
+              <div class="item-input-wrap">
+              <input type="text"  readonly="readonly" value="" id="nik_karyawan_mcu"/>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">TMB</div>
+              <div class="item-input-wrap">
+              <input type="text"  readonly="readonly" value="" id="tmb_karyawan_mcu"/>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li style="background-color: deepskyblue;">
+           
+              <div class="item-input-wrap" style="padding: 10px;">
+                <center><img src="http://103.31.109.106:2224/phpqrcode/examples/mcucode.php?key=00000000" style="border:1px solid blue;" id="imgqr"/></center>
+              </div>
+             
+        </li>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Agenda Check Up</div>
+              <div class="item-input-wrap">
+                <input type="text"   readonly="readonly" value="" id="periode_karyawan_mcu"/>
+              </div>
+            </div>
+          </div>
+        </li>
+           
+      <li>  
+    <div class="block block-strong row">
+      <div class="col">Tunjukan kode QR diatas ke petugas MCU</div> 
+    </div>
+        </li> 
+      </ul>
+       
+    </form>
+  </div>
+</div>
