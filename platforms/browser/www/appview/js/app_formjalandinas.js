@@ -24,7 +24,7 @@ $$(document).on('page:init', '.page[data-name="formjalandinas"]', function (e) {
           cols: [
             {
               textAlign: 'center',  
-              values: [ 'Mobil perusahaan','Kereta', 'Pesawat', 'Ambulance' ,'Umum' ,'Lainnya']
+              values: [ 'Dinas', 'Ambulance' ,'Umum' ]
             }
           ]
         });
