@@ -31,10 +31,9 @@ $$(document).on('page:init', '.page[data-name="medical"]', function (e) {
 
 $$(document).on('page:init', '.page[data-name="requestpage"]', function (e) { 
     $.get(   serverHost + "json_data_menu_spd.php?kid="+kid , function( data ) {
-        
-        if( data.status == 0 ){
-            document.getElementById('button_spd').style.display='none'; 
-             
+        console.log(data)
+        if( data.status == 1 ){ 
+            document.getElementById('button_spd').style.display='block';  
         } 
     });
 });
